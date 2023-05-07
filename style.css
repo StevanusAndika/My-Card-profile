@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, #d6a4c5, #8e7cc3);
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.card-header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-body h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-body p {
+  color: #fff;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links a i {
+  color: #fff;
+}
+
+/* Aturan CSS untuk tampilan non-responsive */
+.btn {
+  display: block;
+  width: 100%;
+  none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
+}
+.btn a{
+  text-decoration: none;
+}
+/* Aturan CSS untuk tampilan responsif */
+@media (max-width: 576px) {
+  .btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Aturan CSS untuk tampilan non-responsive */
+.card-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Aturan CSS untuk tampilan responsif */
+@media (max-width: 768px) {
+  .card-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container {
+    width: 90%;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
